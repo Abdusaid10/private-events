@@ -23,14 +23,14 @@ RSpec.describe User, type: :model do
   it "is invalid with user name longer than specified" do
     user= User.new( name: "ababa"*12, email: "")
     user.valid?
-    expect(user.errors[:name]).to include("can't be longer than 50 chars")
+    expect(user.errors[:name]).to include("is too long (maximum is 50 characters)")
   end
 
   it "creates new valid user" do
+    User.create( name: "Sam", email: "sam@gmail.com")
     user= User.new( name: "Sam", email: "sam@gmail.com")
-    user1= User.new( name: "Sam", email: "sam@gmail.com")
-    user1.valid?
-    expect(user1.errors[:email]).to include("has already taken")
+    user.valid?
+    expect(user.errors[:email]).to include("has already been taken")
   end
 
 end
