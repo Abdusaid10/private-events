@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @loggedin = logged_in?
+    @events = @user.events
   end
 
   private
