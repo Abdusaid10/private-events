@@ -1,5 +1,11 @@
 <h1><%= @user.name %></h1>
 <h4><%= @user.email %></h4>
-<% if @loggedin %>
+<% if logged_in? %>
   <%= link_to "Logout", logout_path, method: :delete %>
+<% end %>
+
+<% @events.each do |e| %>
+<h3> event title => <%= e.title%></h3>
+<p><%= e.description %></p>
+<p><%= e.date %></p>
 <% end %>
