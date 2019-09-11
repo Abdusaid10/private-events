@@ -1,5 +1,5 @@
 <h1><%= @user.name %></h1>
 <h4><%= @user.email %></h4>
-<% if @loggedin %>
+<% if logged_in? %>
   <%= link_to "Logout", logout_path, method: :delete %>
 <% end %>
