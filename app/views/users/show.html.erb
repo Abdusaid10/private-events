@@ -3,3 +3,9 @@
 <% if logged_in? %>
   <%= link_to "Logout", logout_path, method: :delete %>
 <% end %>
+
+<% @events.each do |e| %>
+<h3> event title => <%= e.title%></h3>
+<p><%= e.description %></p>
+<p><%= e.date %></p>
+<% end %>
