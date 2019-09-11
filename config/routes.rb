@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'events/show'
+  get 'events/index'
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
   get '/login', to: 'sessions#new'
