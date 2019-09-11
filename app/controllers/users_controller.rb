@@ -1,13 +1,14 @@
-class UsersController < ApplicationController
-  def index
+# frozen_string_literal: true
 
-  end
+class UsersController < ApplicationController
+  def index; end
+
   def new
-    @user =User.new
+    @user = User.new
   end
 
   def create
-    @user =User.new(user_params)
+    @user = User.new(user_params)
     if @user.save
       log_in @user
       redirect_to @user
@@ -17,11 +18,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user=User.find(params[:id])
-    @loggedin=logged_in?
+    @user = User.find(params[:id])
+    @loggedin = logged_in?
   end
 
   private
+
   def user_params
     params.require(:user).permit(:name, :email)
   end
