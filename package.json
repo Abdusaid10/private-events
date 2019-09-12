@@ -2,6 +2,10 @@
   "name": "private-events",
   "private": true,
   "dependencies": {
+    "@rails/webpacker": "^4.0.7",
     "flatpickr": "^4.6.2"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.8.0"
   }
 }
