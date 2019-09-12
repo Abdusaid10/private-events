@@ -2,8 +2,20 @@
 <p>Find me in app/views/events/index.html.erb</p>
 
 
-<% @events.each do |e| %>
-<h3> event title => <%= e.title%></h3>
-<p><%= e.description %></p>
-<p><%= e.date %></p>
-<% end %>
+<%# <% @events.each do |e| %> %>
+<% if @upcomming_events==nil && @past_eventns==nil %> 
+  <%= content_tag(:h5, "No Events", class: "")%>
+ <%end %>
+ <% unless @upcomming_events==nil %>
+    <%= content_tag(:h5, "Upcomming Events", class: "")%>
+ <% end %>
+ <% @upcomming_events.each do |event|%>
+    <%= render 'event', event: event, time: 'future', from:'' %>
+ <% end %>
+ <% unless @past_events==nil %>
+    <%= content_tag(:h5, "Past Events", class: "")%>
+ <% end %>
+ <% @past_events.each do |event|%>
+    <%= render 'event', event: event, time: 'past', from:'' %>
+ <% end %>
+<%# <% end %> %>
