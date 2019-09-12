@@ -1,5 +1,7 @@
 {
   "name": "private-events",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "flatpickr": "^4.6.2"
+  }
 }
