@@ -1,7 +1,19 @@
-
-<div class="container row">
-<div class="col-9 offset-3">
+<main class="page">
+<header class="navbar">
+    <div>
+        <%= render 'shared/eventbrite_logo'%>
+    </div>
+    <div>
+        <%= link_to "Home", root_path, class: "eb-btn"%>
+    <% if logged_in? %>
+        <%= link_to "Logout", logout_path, method: :delete, class: "eb-btn"%>
+    <% end %>
+    </div>
+</header>
+<div class="row m-0">
+<div class="col-6 card p-5 m-5">
 <h1>New event</h1>
+<br>
   <%= form_for(@event) do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control m-2'%>
@@ -15,8 +27,9 @@
     <%= f.label :date %>
     <%= f.text_field :date, class: 'form-control event-datepicker m-2'%>
 
-    <%= f.submit 'Create Events', class: 'btn btn-primary m-2' %>
+    <%= f.submit 'Create Events', class: 'btn btn-primary float-right m-2' %>
   <% end %>
+  </div>
 </div>
-</div>
+</main>
 
