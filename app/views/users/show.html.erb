@@ -5,6 +5,7 @@
     </div>
 
     <div>
+        <%= link_to "Home", root_path, class: "eb-btn"%>
     <% if logged_in? %>
         <%= link_to "Logout", logout_path, method: :delete, class: "eb-btn"%>
     <% end %>
