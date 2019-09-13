@@ -17,12 +17,12 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'autoprefixer-rails'
+gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+gem 'flatpickr_rails'
 gem 'jquery-rails'
 gem 'sprockets-rails'
-gem 'flatpickr_rails'
-#gem 'webpacker', '~> 4.x'
+# gem 'webpacker', '~> 4.x'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
