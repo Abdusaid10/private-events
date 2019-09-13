@@ -1,3 +1,47 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.eb-home-nav {
+    height: 75vh;
+    width: 100%;
+    background: #DA4453;
+    background: -webkit-linear-gradient(to right, #89216B, #DA4453);
+    background: linear-gradient(to right, #89216B, #DA4453);
+
+    .eb-btn {
+        font-weight: 500;
+        font-size: 18px;
+        padding: 15px;
+        color: white;
+        border: 2px solid white;
+        border-radius: 35px;
+        text-decoration: none;
+    }
+    .eb-btn:hover{
+        background-color: white;
+        color: #DA4453;
+    }
+    .eb-main-text {
+        font-weight: 900;
+        font-size: 52px;
+    }
+
+    header {
+        padding: 15px;
+
+        svg {
+            width: 140px;
+            fill: white;
+        }
+
+        .eb-btn {
+            border: none;
+            border-bottom: 2px solid white;
+            border-radius: 0;
+            text-decoration: none;
+        }
+    }
+}
+
+
+
