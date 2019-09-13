@@ -1,8 +1,30 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<main class="page">
+<header class="navbar">
+    <div>
+        <%= render 'shared/eventbrite_logo'%>
+    </div>
+    <div>
+        <%= link_to "Home", root_path, class: "eb-btn"%>
+    <% if logged_in? %>
+        <%= link_to "Logout", logout_path, method: :delete, class: "eb-btn"%>
+    <% end %>
+    </div>
+</header>
+<div class="row m-0">
+<div class="col-6 card p-5 m-5">
+<h1><%= @event.title%></h1>
+<p class="card-subtitle">by <%= @event.creator.name %></p>
+<br>
+<div class="card-body">
+<%= @event.description %>
+</div>
+
+<div>
+<%= @event.date %>
+</div>
+</div>
+</div>
+</main>
 
 
-<h3> event title => <%= @event.title%></h3>
-<p><%= @event.description %></p>
-<p><%= @event.date %></p>
-<p><%= @event.creator.name %>, <%= @event.creator.email %></p>
+
