@@ -3,7 +3,7 @@
         <div class="card-body">
             <h5 class="card-title"><%= e.title%></h5>
             <p class="card-text"><%= e.description%></p>
-            <a href="#" class="btn btn-primary float-right">View</a>
+            <%= link_to "View", event_path(e.id), class: "btn btn-primary float-right"%>
         </div>
         <div class="card-footer text-muted text-right">
             <%= type == 'past' ? time_ago_in_words(e.date) : e.date %>
