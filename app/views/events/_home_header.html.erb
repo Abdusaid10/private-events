@@ -10,6 +10,10 @@
 </header>
 <section class="eb-main text-center m-5">
 <h1 class="eb-main-text text-white p-5">Made for those who do</h1>
+<%if logged_in? %>
 <%= link_to "Create Events" , new_event_path,  class: "eb-btn"%>
+<%else %>
+<%= link_to "Get started" , new_user_path,  class: "eb-btn"%>
+<%end%>
 </section>
 </nav>
