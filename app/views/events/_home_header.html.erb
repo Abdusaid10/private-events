@@ -1,0 +1,15 @@
+<nav class="eb-home-nav bg-dark">
+<header class="navbar">
+    <div>
+        <%= render 'shared/eventbrite_logo'%>
+    </div>
+    <div>
+
+        <%= link_to "Login" , login_path,  class: "eb-btn"%>
+    </div>
+</header>
+<section class="eb-main text-center m-5">
+<h1 class="eb-main-text text-white p-5">Made for those who do</h1>
+<%= link_to "Create Events" , new_event_path,  class: "eb-btn"%>
+</section>
+</nav>
