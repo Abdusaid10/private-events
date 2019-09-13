@@ -7,14 +7,30 @@
 
 
 ## Screenshots
-<img src="1.png">
-<img src="2.png">
-<img src="3.png">
-<img src="4.png">
-<img src="5.png">
-<img src="6.png">
-<img src="7.png">
-<img src="8.png">
+
+### Home Page
+<img src="./screenshots/1.PNG">
+
+
+<img src="./screenshots/2.PNG">
+
+### Sign up Page
+<img src="./screenshots/3.PNG">
+
+### Login Page
+<img src="./screenshots/4.PNG">
+
+### My Profile Page
+<img src="./screenshots/5.PNG">
+
+
+<img src="./screenshots/6.PNG">
+
+### After Login: Home Page
+<img src="./screenshots/7.PNG">
+
+### Create Event Page
+<img src="./screenshots/8.PNG">
 
 ## Prerequisite
 
