@@ -13,6 +13,7 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require flatpickr
 
 //= require rails-ujs
 //= require activestorage

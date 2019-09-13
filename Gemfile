@@ -21,7 +21,7 @@ gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem 'sprockets-rails'
-
+gem 'flatpickr_rails'
 #gem 'webpacker', '~> 4.x'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
