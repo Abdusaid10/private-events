@@ -2,8 +2,8 @@
 
 class EventsController < ApplicationController
   def index
-    @upcomming_events = current_user.events.upcomming.order(date: :desc)
-    @past_events = current_user.events.past.order(date: :desc)
+    @upcomming_events = Event.upcomming.order(date: :desc)
+    @past_events = Event.past.order(date: :desc)
   end
 
   def show
