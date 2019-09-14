@@ -12,6 +12,7 @@
 <h1>Get started</h1>
 <br>
   <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages_for_user'%>
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control m-2'%>
 
