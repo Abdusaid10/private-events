@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'invitations/new'
+  get 'invitations/show'
   get 'events/show'
   get 'events/index'
   get '/signup', to: 'users#new'
