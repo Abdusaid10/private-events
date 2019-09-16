@@ -3,7 +3,7 @@
 class User < ApplicationRecord
   has_many :events
   has_many :attendances
-  has_many :events_as_attendee, through: :attendances, source: 'event'
+  has_many :events_as_attendee, through: :attendances, source: 'Event'
   has_many :invitations, class_name: 'Invitation', foreign_key: 'invitation_creator'
   has_many :invitations_received, class_name: 'Invitation', foreign_key: 'invited_user'
   validates :name, presence: true, length: { maximum: 50 }
