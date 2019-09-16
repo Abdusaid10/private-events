@@ -11,13 +11,11 @@
 
             <div>
                 <%= @event.date %>
+                <% if same_user?(@event.creator) && @event.date > DateTime.now %>
+                    <%= link_to "Invite", invite_path , class: "btn btn-primary w-25 float-right" %>
+                <%end%>
             </div>
         </div>
-        <% if same_user?(@event.creator) && @event.date > DateTime.now %>
-            <div class="col-4 card p-5 m-5">
-                <h3>Add Attendees</h3>
-                <%= link_to "Invite", invite_path , class: "eb-btn" %>
-            </div>
-        <%end%>
+
     </div>
 </main>
