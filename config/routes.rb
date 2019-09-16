@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # get '/invite', to: 'invitations/new'
   get 'invitations/show'
-  get 'invitations/new'
+  get '/invite', to: 'invitations#new'
   get 'events/show'
   get 'events/index'
   get '/signup', to: 'users#new'

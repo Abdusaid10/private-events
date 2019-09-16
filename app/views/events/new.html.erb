@@ -1,15 +1,5 @@
 <main class="page">
-<header class="navbar">
-    <div>
-        <%= render 'shared/eventbrite_logo'%>
-    </div>
-    <div>
-        <%= link_to "Home", root_path, class: "eb-btn"%>
-    <% if logged_in? %>
-        <%= link_to "Logout", logout_path, method: :delete, class: "eb-btn"%>
-    <% end %>
-    </div>
-</header>
+<%= render 'shared/header'%>
 <div class="row m-0">
 <div class="col-6 card p-5 m-5">
 <h1>New event</h1>
