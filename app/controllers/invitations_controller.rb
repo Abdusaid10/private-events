@@ -13,7 +13,9 @@ class InvitationsController < ApplicationController
 
     @invitation = Invitation.new
 
-    if user && user.events_as_attendee.find_by(id: event.id).nil? && user.invitations_received.find_by(event: event).nil?
+    if user &&
+       user.events_as_attendee.find_by(id: event.id).nil? &&
+       user.invitations_received.find_by(event: event).nil?
       @invitation = current_user.invitations.new(event: event, invited_user: user)
     elsif user
       flash.now[:notice] = 'User already invited'
