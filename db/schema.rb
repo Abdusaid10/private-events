@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2019_09_14_041437) do
   end
 
   create_table "invitations", force: :cascade do |t|
+    t.string "email"
     t.integer "event_creator"
     t.integer "event_id"
     t.integer "invited_user"
