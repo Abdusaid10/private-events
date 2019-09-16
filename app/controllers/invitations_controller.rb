@@ -6,7 +6,6 @@ class InvitationsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:invitation][:email])
     @invitation = Invitation.new(invitation_params)
     if @invitation.save
       flash[:notice] = 'Invitation sent'
