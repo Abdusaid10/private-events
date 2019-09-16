@@ -18,4 +18,16 @@
         </div>
 
     </div>
+
+    <section class="container m-5">
+        <h2>Attendees</h2>
+        <%if @attendees.empty? %>
+            <h3 class="text-center">There is no attendees</h3>     
+        <%else%>
+            <% @attendees.each do |attendee|%>
+                <hr>
+                <h5><%=attendee.email%></h5>
+            <%end%>
+        <%end%>
+    </section>
 </main>

@@ -8,6 +8,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @attendees = Invitation.where(event_id: @event.id)
   end
 
   def new
