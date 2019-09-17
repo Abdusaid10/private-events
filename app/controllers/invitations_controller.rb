@@ -11,7 +11,6 @@ class InvitationsController < ApplicationController
       flash[:notice] = 'Invitation sent'
       redirect_to event_path(params[:invitation][:event_id])
     else
-      p @invitation.errors
       flash[:warn] = 'Error occured: try again'
       redirect_to invite_path(eventid: params[:invitation][:event_id])
     end
