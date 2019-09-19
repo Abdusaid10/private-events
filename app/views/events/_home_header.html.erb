@@ -12,12 +12,14 @@
     <%end%>
     </div>
 </header>
-<section class="eb-main text-center m-5">
-<h1 class="eb-main-text text-white p-5">Made for those who do</h1>
-<%if logged_in? %>
-<%= link_to "Create Events" , new_event_path,  class: "eb-btn"%>
-<%else %>
-<%= link_to "Get started" , signup_path,  class: "eb-btn"%>
-<%end%>
+<section class="eb-main d-flex justify-content-center align-items-center text-center">
+    <div>
+        <h1 class="eb-main-text text-white p-5">Made for those who do</h1>
+        <%if logged_in? %>
+        <%= link_to "Create Events" , new_event_path,  class: "eb-btn"%>
+        <%else %>
+        <%= link_to "Get started" , signup_path,  class: "eb-btn"%>
+        <%end%>
+    </div>
 </section>
 </nav>

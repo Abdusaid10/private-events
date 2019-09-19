@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .eb-home-nav {
-    height: 75vh;
+    height: 100vh;
     width: 100%;
     background: #DA4453;
     background: -webkit-linear-gradient(to right, #89216B, #DA4453);
@@ -17,14 +17,22 @@
         border-radius: 35px;
         text-decoration: none;
     }
-    .eb-btn:hover{
+
+    .eb-btn:hover {
         background-color: white;
         color: #DA4453;
     }
-    .eb-main-text {
-        font-weight: 900;
-        font-size: 52px;
+
+    .eb-main {
+        height: 90%;
+
+        .eb-main-text {
+            font-weight: 900;
+            font-size: 52px;
+        }
+
     }
+
 
     header {
         padding: 15px;
@@ -45,7 +53,7 @@
 
 
 
-.card{
-    box-shadow: 0px 0px 30px -24px rgba(0,0,0,0.55);
+.card {
+    box-shadow: 0px 0px 30px -24px rgba(0, 0, 0, 0.55);
     border: none;
 }
