@@ -20,13 +20,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @events = @user.events
-    # @upcoming_events = @user.events.upcoming.order(date: :desc)
-    # @past_events = @user.events.past.order(date: :desc)
-    @upcoming_evs = Event.where('date > ?', DateTime.now).order(date: :desc)
-    @past_evs = Event.where('date < ?', DateTime.now).order(date: :desc)
-    @invited = Event.joins(:attendance).where(attendances: { 'user_id' => current_user.id })
-    @u_events_invited = @invited.where(date: @upcoming_evs)
-    @p_events_invited = @invited.where(date: @past_events)
+    @upcoming_events = Event.where('date > ?', DateTime.now).order(date: :desc)
+    @past_events = Event.where('date < ?', DateTime.now).order(date: :desc)
   end
 
   private
