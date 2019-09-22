@@ -1,2 +1,3 @@
 first:
-  email: "test"
+  name: "test"
+  email: "test@test.com"
