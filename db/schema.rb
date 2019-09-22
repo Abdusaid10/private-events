@@ -33,9 +33,11 @@ ActiveRecord::Schema.define(version: 2019_09_14_041437) do
     t.string "email"
     t.integer "event_creator"
     t.integer "event_id"
-    t.integer "invited_user"
+    t.integer "invited_user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_invitations_on_event_id"
+    t.index ["invited_user_id"], name: "index_invitations_on_invited_user_id"
   end
 
   create_table "users", force: :cascade do |t|
