@@ -7,6 +7,7 @@ class InvitationsController < ApplicationController
 
   def create
     @invitation = Invitation.new(invitation_params)
+    @invitation.invited_user_id = User.find_by(email: @invitation.email).id
     if @invitation.save
       flash[:notice] = 'Invitation sent'
       redirect_to event_path(params[:invitation][:event_id])
