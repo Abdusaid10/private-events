@@ -17,7 +17,7 @@ RSpec.describe Event, type: :model do
     expect(event.errors[:title]).to include("can't be blank")
   end
 
-  it 'is invalid without event email' do
+  it 'is invalid without event url' do
     event = @user.events.new(title: 'New event', url: nil, date: 3.days.after)
     event.valid?
     expect(event.errors[:url]).to include("can't be blank")
