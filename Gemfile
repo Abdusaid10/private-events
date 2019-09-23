@@ -50,7 +50,7 @@ group :development, :test do
   gem 'prettier'
   gem 'rspec-rails'
   gem "database_cleaner"
-  gem "shoulda-matchers", require: false
+  gem "shoulda-matchers"
 end
 
 group :development do
