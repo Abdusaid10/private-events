@@ -12,11 +12,12 @@
 <h1>Log in</h1>
 <br>
     <%= form_for(:session, url: login_path) do |f| %>
-      
-      <%= f.label :email %>
+      <div id="session">
+      <%= f.label :email, 'Email' %>
       <%= f.email_field :email, class: 'form-control m-2'%>
 
       <%= f.submit 'Log in', class: 'btn btn-primary float-right' %>
+      <div>
     <% end %>
   </div>
 </div>
