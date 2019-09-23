@@ -3,8 +3,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  # pending "add some examples to (or delete) #{__FILE__}"
-
+  context 'associations' do
+    it { should have_many(:events) }
+  end
   it 'creates new valid user' do
     user = User.new(name: 'Sam', email: 'sam@gmail.com')
     expect(user).to be_valid

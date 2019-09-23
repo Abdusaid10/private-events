@@ -4,8 +4,9 @@ require 'rails_helper'
 
 RSpec.describe Event, type: :model do
   before :each do
-    @user = User.find_by(email: 'test@test.com')
+    @user = User.create(name: 'test', email: 'test@test.com')
   end
+
   it 'creates new valid event' do
     event = @user.events.create(title: 'New event', description: '', url: 'https://www.gmail.com', date: 3.days.after)
     expect(event).to be_valid
