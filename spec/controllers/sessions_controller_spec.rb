@@ -3,16 +3,21 @@
 require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
-  fixtures :users
-  before { @user = users(:first) }
-
+  before :each do
+    @user = User.create(name: 'test', email: 'test@test.com')
+  end
   describe 'GET #new' do
     it 'returns http success' do
       get :new
       expect(response).to have_http_status(:success)
     end
   end
-
+  describe 'POST #new' do
+    it 'login user' do
+      post :new, params: { session: { email: 'test@test.com' } }
+      expect(response).to have_http_status(:success)
+    end
+  end
   describe 'DELETE #destroy' do
     it 'logs out if user is logged in' do
       session[:user_id] = 1
