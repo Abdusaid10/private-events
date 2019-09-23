@@ -13,6 +13,7 @@
 <br>
   <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages_for_user'%>
+    <div id="signup">
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control m-2'%>
 
@@ -20,6 +21,7 @@
     <%= f.email_field :email, class: 'form-control m-2'%>
 
     <%= f.submit 'Sign up', class: 'btn btn-primary m-2 float-right' %>
+    <div>
   <% end %>
   </div>
 </div>
