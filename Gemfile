@@ -49,6 +49,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'prettier'
   gem 'rspec-rails'
+  gem "shoulda-matchers", require: false
 end
 
 group :development do
