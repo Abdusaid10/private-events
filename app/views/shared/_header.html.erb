@@ -1,0 +1,11 @@
+<header class="navbar">
+    <div>
+        <%= render 'shared/eventbrite_logo'%>
+    </div>
+    <div>
+        <%= link_to "Home", root_path, class: "eb-btn"%>
+    <% if logged_in? %>
+        <%= link_to "Logout", logout_path, method: :delete, class: "eb-btn"%>
+    <% end %>
+    </div>
+</header>
