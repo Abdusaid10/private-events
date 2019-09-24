@@ -1,0 +1,25 @@
+<main class="page">
+<header class="navbar">
+    <div>
+        <%= render 'shared/eventbrite_logo'%>
+    </div>
+    <div>
+        <%= link_to "Sign up" , signup_path,  class: "eb-btn"%>
+    </div>
+</header>
+<div class="row m-0">
+<div class="col-md-6 card p-5 m-5">
+<h1>Log in</h1>
+<br>
+    <%= form_for(:session, url: login_path) do |f| %>
+      <div id="session">
+      <%= f.label :email, 'Email' %>
+      <%= f.email_field :email, class: 'form-control m-2'%>
+
+      <%= f.submit 'Log in', class: 'btn btn-primary float-right' %>
+      <div>
+    <% end %>
+  </div>
+</div>
+</main>
+

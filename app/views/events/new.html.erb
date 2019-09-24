@@ -1,0 +1,26 @@
+<main class="page">
+<%= render 'shared/header'%>
+<div class="row m-0">
+<div class="col-md-6 card p-5 m-5">
+<h1>New event</h1>
+<br>
+  <%= form_for(@event) do |f| %>
+    <%= render 'shared/error_messages_for_events'%>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control m-2'%>
+
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control m-2'%>
+
+    <%= f.label :url %>
+    <%= f.text_field :url, class: 'form-control m-2'%>
+
+    <%= f.label :date %>
+    <%= f.text_field :date, class: 'form-control event-datepicker m-2'%>
+
+    <%= f.submit 'Create Events', class: 'btn btn-primary float-right m-2' %>
+  <% end %>
+  </div>
+</div>
+</main>
+

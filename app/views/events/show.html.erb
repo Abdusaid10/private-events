@@ -1,0 +1,33 @@
+<main class="page">
+<%= render 'shared/header'%>
+    <div class="row m-0">
+        <div class="col-md-6 card p-5 m-5">
+            <h1><%= @event.title%></h1>
+            <p class="card-subtitle">by <%= @event.creator.name %></p>
+            <br>
+            <div class="card-body">
+                <%= @event.description %>
+            </div>
+
+            <div>
+                <%= @event.date %>
+                <% if same_user?(@event.creator) && @event.date > DateTime.now %>
+                    <%= link_to "Invite", invite_path(eventid: @event.id) , class: "btn btn-primary w-25 float-right" %>
+                <%end%>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="container m-5">
+        <h2>Attendees</h2>
+        <%if @attendees.empty? %>
+            <h3 class="text-center">There is no attendees</h3>     
+        <%else%>
+            <% @attendees.each do |attendee|%>
+                <hr>
+                <h5><%=attendee.email%></h5>
+            <%end%>
+        <%end%>
+    </section>
+</main>
